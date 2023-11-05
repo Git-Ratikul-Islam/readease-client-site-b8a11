@@ -5,6 +5,7 @@ import AddBooks from "../Pages/Home/AddBooks/AddBooks";
 import AllBooks from "../Pages/Home/AllBooks/AllBooks";
 import BorrowedBooks from "../Pages/Home/BorrowedBooks/BorrowedBooks";
 import ErrorElement from "../Pages/Home/ErrorElement/ErrorElement";
+import Route404 from "../Pages/Home/Route404/Route404";
 
 const router = createBrowserRouter([
       {
@@ -27,12 +28,12 @@ const router = createBrowserRouter([
                   path: "/borrowedBooks",
                   element: <BorrowedBooks></BorrowedBooks>
             }
+            ],
 
-
-
-
-
-            ]
       },
+      {
+            path: "*",
+            element: <Route404></Route404>
+      }
 ]);
 export default router;
