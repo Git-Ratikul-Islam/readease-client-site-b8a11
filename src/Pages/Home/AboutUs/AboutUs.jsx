@@ -2,7 +2,7 @@
 const AboutUs = () => {
       return (
             <div className="hero min-h-screen ">
-                  <div className="hero-content flex-col lg:flex-row-reverse w-full flex justify-between">
+                  <div className="hero-content  flex-col lg:flex-row-reverse w-full flex justify-between">
                         <img src="https://i.ibb.co/CPkqXyK/The-Lord-Paradise-Mockup2.png" className="max-w-sm w-1/2 rounded-lg shadow-2xl" />
                         <div className=" w-1/2 text-center ">
                               <h2 className="lg:text-5xl text-3xl font-semibold text-[#262626s]">About us</h2>

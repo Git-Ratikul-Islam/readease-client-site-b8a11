@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 
 const AddBooks = () => {
       return (
-            <div className="min-h-screen p-6 bg-gray-100 flex items-center justify-center">
+            <div className="min-h-screen p-6  flex items-center justify-center">
                   <div className="container max-w-screen-lg mx-auto">
                         <div>
                               <h2 className="font-semibold text-xl text-gray-600">Responsive Form</h2>
                               <p className="text-gray-500 mb-6">Form is mobile responsive. Give it a try.</p>
 
-                              <div className="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
+                              <div className="bg-[#cbe4eb] rounded shadow-lg p-4 px-4 md:p-8 mb-6">
                                     <div className="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
                                           <div className="text-gray-600">
                                                 <p className="font-medium text-lg">Personal Details</p>
@@ -227,10 +227,10 @@ const AddBooks = () => {
 
                                                       <div className="md:col-span-5 text-right">
                                                             <div className="inline-flex items-end">
-                                                                  <Link to="/"> <button className="bg-blue-500 mr-4 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                                                  <Link to="/"> <button className="bg-[#abc7cb]  drop-shadow mr-4 hover:bg-[#bbdadf] text-[#1f2937] font-bold py-2 px-4 rounded">
                                                                         Go Home
                                                                   </button></Link>
-                                                                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                                                  <button className="bg-[#abc7cb] drop-shadow mr-4 hover:bg-[#bbdadf] text-[#1f2937] font-bold py-2 px-4 rounded">
                                                                         Submit
                                                                   </button>
                                                             </div>
@@ -240,18 +240,6 @@ const AddBooks = () => {
                                     </div>
                               </div>
                         </div>
-
-                        <a
-                              href="https://www.buymeacoffee.com/dgauderman"
-                              target="_blank"
-                              className="md:absolute bottom-0 right-0 p-4 float-right" rel="noreferrer"
-                        >
-                              <img
-                                    src="https://www.buymeacoffee.com/assets/img/guidelines/logo-mark-3.svg"
-                                    alt="Buy Me A Coffee"
-                                    className="transition-all rounded-full w-14 -rotate-45 hover:shadow-sm shadow-lg ring hover:ring-4 ring-white"
-                              />
-                        </a>
                   </div>
             </div>
       );
