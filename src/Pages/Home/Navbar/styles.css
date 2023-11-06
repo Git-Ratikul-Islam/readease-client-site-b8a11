@@ -1,0 +1,15 @@
+.navbar {
+      transition: 0.3s;
+}
+
+.sticky {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 80%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-color: white;
+      /* Change this to your preferred background color */
+      z-index: 1000;
+      /* Adjust the z-index as needed */
+}
