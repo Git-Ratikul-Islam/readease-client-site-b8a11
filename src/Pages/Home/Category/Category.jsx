@@ -9,9 +9,9 @@ const Category = () => {
                         <h1 className='text-6xl'>Category</h1>
                         <h4 className='text-lg mt-4 ml-2'>Popular category of books visit now to borrow</h4>
                   </div>
-                  <div className="min-h-[40vh] grid grid-cols-4 gap-3 w-5/6 mx-auto place-items-center">
+                  <div className="min-h-[40vh] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 w-5/6 mx-auto place-items-center ">
                         {/* Card Number 1 */}
-                        <div className="rounded-md bg-[#cbe4eb] shadow-lg hover-effect " >
+                        <div className="rounded-md bg-[#cbe4eb] shadow-lg hover-effect" >
                               <div className="md:flex px-4 leading-none max-w-sm">
                                     <div className="flex-none">
                                           <img
@@ -75,7 +75,7 @@ const Category = () => {
                               </div>
                         </div>
                         {/* Card Number 4 */}
-                        <div className="rounded-md bg-[#cbe4eb] hover-effect shadow-lg" >
+                        <div className="rounded-md bg-[#cbe4eb] hover-effect shadow-lg mt-16 md:mt-0 lg:mt-0" >
                               <div className="md:flex px-4 leading-none max-w-sm">
                                     <div className="flex-none">
                                           <img

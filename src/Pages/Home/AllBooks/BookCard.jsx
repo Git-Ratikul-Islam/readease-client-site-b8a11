@@ -5,7 +5,8 @@ const BookCard = ({ book }) => {
             <div className="grid grid-cols-4">
                   <div className=" w-96 border border-[#abc7cb] mt-14 mb-4">
                         <figure className="px-10 pt-10">
-                              <img src={image} alt="Shoes" className="rounded-xl" />
+                              <img data-aos="zoom-out-down" data-aos-easing="linear"
+                                    data-aos-duration="500" src={image} alt="Shoes" className="" />
                         </figure>
                         <div className="card-body items-start text-start ml-3">
                               <h2 className="card-title font-semibold text-3xl text-[#1f2937bc]">{category}</h2>

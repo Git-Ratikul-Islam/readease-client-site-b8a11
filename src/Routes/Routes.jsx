@@ -6,6 +6,9 @@ import AllBooks from "../Pages/Home/AllBooks/AllBooks";
 import BorrowedBooks from "../Pages/Home/BorrowedBooks/BorrowedBooks";
 import ErrorElement from "../Pages/Home/ErrorElement/ErrorElement";
 import Route404 from "../Pages/Home/Route404/Route404";
+import Login from "../Pages/Home/Authentication/Login";
+import SIgnUp from "../Pages/Home/Authentication/SIgnUp";
+import PrivateRoutes from "../Pages/Routes/PrivateRoutes";
 
 const router = createBrowserRouter([
       {
@@ -18,17 +21,25 @@ const router = createBrowserRouter([
             },
             {
                   path: "/addBooks",
-                  element: <AddBooks></AddBooks>
+                  element: <PrivateRoutes><AddBooks></AddBooks></PrivateRoutes>
             },
             {
                   path: "/allBooks",
-                  element: <AllBooks></AllBooks>,
+                  element: <PrivateRoutes><AllBooks></AllBooks></PrivateRoutes>,
                   loader: () => fetch('http://localhost:5000/book')
 
             },
             {
                   path: "/borrowedBooks",
-                  element: <BorrowedBooks></BorrowedBooks>
+                  element: <PrivateRoutes><BorrowedBooks></BorrowedBooks></PrivateRoutes>
+            },
+            {
+                  path: "/login",
+                  element: <Login></Login>
+            },
+            {
+                  path: "/signUp",
+                  element: <SIgnUp></SIgnUp>
             }
             ],
 
