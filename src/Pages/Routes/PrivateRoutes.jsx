@@ -8,13 +8,14 @@ import { Navigate } from "react-router-dom";
 const PrivateRoutes = ({ children }) => {
 
       const { user, loading } = useContext(AuthContext);
+      if (loading) {
+            return <span className="loading loading-spinner lg:ml-[900px] md:w-0 ml-48 w-[100px] flex justify-center text-center text-black"></span>;
+      }
 
       if (user) {
             return children;
       }
-      if (loading) {
-            <span className="loading loading-spinner loading-lg text-center text-black"></span>;
-      }
+
 
 
 
