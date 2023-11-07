@@ -22,7 +22,9 @@ const router = createBrowserRouter([
             },
             {
                   path: "/allBooks",
-                  element: <AllBooks></AllBooks>
+                  element: <AllBooks></AllBooks>,
+                  loader: () => fetch('http://localhost:5000/book')
+
             },
             {
                   path: "/borrowedBooks",
