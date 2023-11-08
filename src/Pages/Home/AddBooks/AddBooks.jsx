@@ -20,7 +20,7 @@ const AddBooks = () => {
             console.log(newBook);
 
             // send data to the server
-            fetch('http://localhost:5000/book', {
+            fetch('https://readease-server.vercel.app/book', {
                   method: 'POST',
                   headers: {
                         'content-type': 'application/json'

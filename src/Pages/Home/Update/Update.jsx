@@ -25,7 +25,7 @@ const Update = () => {
             console.log(updateNewBook);
 
             // send data to the server
-            fetch(`http://localhost:5000/book/${_id}`, {
+            fetch(`https://readease-server.vercel.app/book/${_id}`, {
                   method: 'PUT',
                   headers: {
                         'content-type': 'application/json'
@@ -64,7 +64,7 @@ const Update = () => {
                                           </div>
 
                                           <div className="lg:col-span-2">
-                                                <form onSubmit={handleUpdateBook} ref={formRef}>
+                                                <form onSubmit={handleUpdateBook} ref={formRef} action="somepage.php" method="get">
                                                       <div className="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
 
 
@@ -112,13 +112,33 @@ const Update = () => {
                                                             </div>
                                                             <div className="md:col-span-5">
                                                                   <label htmlFor="email">Category</label>
-                                                                  <input
-                                                                        defaultValue={category}
+                                                                  <input list="category"
+                                                                        // defaultValue={category}
                                                                         required
                                                                         type="text"
                                                                         name="category"
-                                                                        className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
-                                                                  />
+                                                                        className="h-10 border mt-1 rounded px-4 w-full bg-gray-50" />
+
+                                                                  <datalist id="category">
+                                                                        <option value="Art and music"></option>
+                                                                        <option value="History" ></option>
+                                                                        <option value="Mysterious" ></option>
+                                                                        <option value="Self help"></option>
+                                                                  </datalist>
+
+
+                                                                  {/* <select className="h-10 border mt-1 rounded px-4 w-full bg-gray-50" required defaultValue={category}>
+
+                                                                        <option value="Afghanistan" defaultValue={category}>Art and music</option>
+                                                                        <option value="Albania" defaultValue={category}>History</option>
+                                                                        <option value="Algeria" defaultValue={category}>Mysterious</option>
+                                                                        <option value="American Samoa" defaultValue={category}>Self help</option>
+
+                                                                  </select> */}
+
+
+
+
                                                             </div>
                                                             <div className="md:col-span-5">
                                                                   <label htmlFor="email"> Short description

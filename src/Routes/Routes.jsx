@@ -27,7 +27,7 @@ const router = createBrowserRouter([
             {
                   path: "/allBooks",
                   element: <PrivateRoutes><AllBooks></AllBooks></PrivateRoutes>,
-                  loader: () => fetch('http://localhost:5000/book')
+                  loader: () => fetch('https://readease-server.vercel.app/book')
 
             },
             {
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
             {
                   path: "/updateBook/:id",
                   element: <Update></Update>,
-                  loader: ({ params }) => fetch(`http://localhost:5000/book/${params.id}`)
+                  loader: ({ params }) => fetch(`https://readease-server.vercel.app/book/${params.id}`)
             },
             {
                   path: "/login",
