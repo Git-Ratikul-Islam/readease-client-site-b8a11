@@ -9,6 +9,7 @@ import Route404 from "../Pages/Home/Route404/Route404";
 import Login from "../Pages/Home/Authentication/Login";
 import SIgnUp from "../Pages/Home/Authentication/SIgnUp";
 import PrivateRoutes from "../Pages/Routes/PrivateRoutes";
+import Update from "../Pages/Home/Update/Update";
 
 const router = createBrowserRouter([
       {
@@ -32,6 +33,11 @@ const router = createBrowserRouter([
             {
                   path: "/borrowedBooks",
                   element: <PrivateRoutes><BorrowedBooks></BorrowedBooks></PrivateRoutes>
+            },
+            {
+                  path: "/updateBook/:id",
+                  element: <Update></Update>,
+                  loader: ({ params }) => fetch(`http://localhost:5000/book/${params.id}`)
             },
             {
                   path: "/login",
